@@ -1,0 +1,128 @@
+:root { /* PALETA DE COLORES */
+    --color-fondo:#252525;
+    --color-violetaC:#5441ff;
+    --color3:#ff0011;
+    --color-verde:#18b625;
+    --color-letras:#ffffff;
+  }
+  *{/*  CON ESTOS ATRIBUTOS SETEAMOS TODO EN 0 PARA EVITAR CAMBIOS DE TAMAÑO INESPERADOS */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+  } 
+
+  .centrarEnColumnas{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;    
+  }
+
+.centrarEnFilas{
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;    
+  }
+
+body{
+    display: flex; 
+    flex-direction: column;
+    align-items: center;   
+
+    min-height: 100vh; 
+    background-color: var(--color-fondo);
+    color: var(--color-letras);
+  }
+
+#banner h1{
+    text-align: center;
+    font-size: 3em;
+    padding: 1em 0 0.5em 0;
+  }
+
+#navbar{
+    margin-left: 6em;
+}
+#navbar ul {  
+    display: flex;
+    flex-direction: row; /* Con estos 3 centro todo */
+    justify-content: center;
+
+    font-size: 200%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    
+    list-style-type: none;    /*  SACAMOS LAS VIÑETAS */
+    background-color:var(--color-fondo);
+  }
+  
+#navbar li a {  
+    padding-right: 3em;
+    color: var(--color-letras);  
+    text-decoration: none;  /* SACAMOS EL UNDERLINED  */
+  }
+#navbar li a:hover {
+    text-decoration: underline;
+  } 
+
+#carta h1 {    
+    text-align: center;
+    border-style: solid;
+    padding: 1em 12em; 
+    width: 90%;    /* Ex 110vh   */     
+} 
+.tablaComidas{
+    padding: 1.5em;
+} 
+
+.tablaComidas tr,td{
+    padding: 1em;
+} 
+.tablaComidas th{
+    font-size: 2em;
+}
+.tablaComidas td{
+    font-size: 1.5em;
+  }
+  
+footer{    
+  width: 100%;
+  margin-top:auto;
+  padding-bottom: 2.5em;  
+  background-color: #33303a;
+}
+ 
+#formularioDeReserva fieldset{   
+  font-size: 30px;  
+  text-align: center;
+  border: #f7e4be 5px solid;
+  width: 110vh;
+  padding: 2em;   
+}
+
+#formReserva input{  
+  font-size: 30px;
+  margin-bottom: 1em;
+}
+
+#formReserva input{
+  margin-bottom: 1em;
+}
+
+#botonEnviar{
+ padding: 20px;
+  margin-top: 1.5em;
+}
+#terminosReserva{
+  text-align: center;
+  padding: 2em;
+  color: var(--color-letras); 
+ } 
+
+ #opcionales *{
+  font-size: 30px;
+  padding: 1em;
+ }
+
+ #divFooter h1{
+  padding: 1em;
+ }

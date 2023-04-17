@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carta</title>   
+        <link rel="stylesheet" href="css/style.css"> 
+    </head>
+<body>
+
+<!--   BANNER  -->
+<section id="banner">
+        <h1>Restaurante La Número 1</h1>
+    <!--  NAVBAR -->
+    <nav id="navbar">
+        <ul>        
+           <li><a href="carta.html#entradas">Entradas</a></li>
+           <li><a href="carta.html#platosPrincipales">Plato Principal</a></li>
+           <li><a href="carta.html#postres">Postres</a></li>
+           <li><a href="carta.html#bebidas">Bebidas</a></li>
+           <li><a href="reservas.html">Reservas</a></li>
+        </ul>
+    </nav>
+</section>
+
+<section id = "formularioDeReserva" class="tablaComidas ">
+
+    <fieldset> 
+        <legend>Formulario de Reserva:</legend>
+    <form id ="formReserva" class="centrarEnColumnas" action="" >
+        <label for="nombreCompleto">Nombre Completo</label>
+        <input type="text" id="nombreCompleto" name="nombreCompleto">
+        <label for="dni">DNI</label>
+        <input type="text" id="dni" name="dni">
+        <label for="telefonoContacto">Telefono de Contacto</label>
+        <input type="text" id="telefonoContacto" name="telefonoContacto">
+        <label for="lname">Cantidad de Personas</label>
+        <input type="text" id="cantidadPersonas" name="cantidadTotal">
+
+    <section id="opcionales">
+        <h1>¿Requiere algún tipo de menú especial? (vacio para no)</h1>
+        <input type="checkbox" id="celiaco" name="menuCeliaco" value="celiaco">
+        <label for="menuCeliaco"> Menu Celiaco</label>
+        <input type="checkbox" id="menuVegano" name="menuVegano" value="vegano">
+        <label for="menuVegano"> Menu Vegano </label>
+    </section>
+        <input id="botonEnviar" type="submit" value="Realizar Reserva">
+    </form>
+
+</fieldset>
+</section>
+
+<section id = "terminosReserva" class="centrarEnColumnas">
+    <h1>Términos y Condiciones de Reserva</h1>                        
+   <h3> Prohibido fumar dentro del salon, el derecho de admision esta reservado </h2>
+</section>
+
+<footer class="centrarEnColumnas">
+    <div id= divFooter class="centrarEnFilas">
+        <h1>Donovan y camino Gral Chamizo</h1>
+        <h1>Gerli</h1>
+        <h1>Contacto: 4594-5546</h1>
+    </div>    
+</footer> 
+
+</body>
+</html>
