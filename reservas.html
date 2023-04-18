@@ -32,18 +32,18 @@
         <label for="nombreCompleto">Nombre Completo</label>
         <input type="text" id="nombreCompleto" name="nombreCompleto">
         <label for="dni">DNI</label>
-        <input type="text" id="dni" name="dni">
-        <label for="telefonoContacto">Telefono de Contacto</label>
-        <input type="text" id="telefonoContacto" name="telefonoContacto">
+        <input type="number" id="dni" name="dni">
+        <label for="telefonoContacto">Teléfono de Contacto</label>
+        <input type="tel" id="telefonoContacto" name="telefonoContacto">
         <label for="lname">Cantidad de Personas</label>
-        <input type="text" id="cantidadPersonas" name="cantidadTotal">
+        <input type="number" placeholder=1 min=1 max=15 id="cantidadPersonas" name="cantidadTotal">
 
     <section id="opcionales">
-        <h1>¿Requiere algún tipo de menú especial? (vacio para no)</h1>
+        <h1>¿Requiere algún tipo de menú especial?</h1>
         <input type="checkbox" id="celiaco" name="menuCeliaco" value="celiaco">
-        <label for="menuCeliaco"> Menu Celiaco</label>
+        <label for="menuCeliaco"> Celíaco</label>
         <input type="checkbox" id="menuVegano" name="menuVegano" value="vegano">
-        <label for="menuVegano"> Menu Vegano </label>
+        <label for="menuVegano"> Vegano </label>
     </section>
         <input id="botonEnviar" type="submit" value="Realizar Reserva">
     </form>
