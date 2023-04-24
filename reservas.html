@@ -30,13 +30,13 @@
         <legend>Formulario de Reserva:</legend>
     <form id ="formReserva" class="centrarEnColumnas" action="" >
         <label for="nombreCompleto">Nombre Completo</label>
-        <input type="text" id="nombreCompleto" name="nombreCompleto">
+        <input type="text" id="nombreCompleto" name="nombreCompleto" placeholder="Pepe Argento" required >
         <label for="dni">DNI</label>
-        <input type="number" id="dni" name="dni">
+        <input type="number" id="dni" name="dni" placeholder="Ingrese los 8 digitos del DNI" required pattern=/^[a-z]{8}$/ >
         <label for="telefonoContacto">Teléfono de Contacto</label>
-        <input type="tel" id="telefonoContacto" name="telefonoContacto">
-        <label for="lname">Cantidad de Personas</label>
-        <input type="number" placeholder=1 min=1 max=15 id="cantidadPersonas" name="cantidadTotal">
+        <input type="tel" id="telefonoContacto" name="telefonoContacto" placeholder="Maximo 13 caracteres" required pattern=/^[a-z]{12,13}$/ >
+        <label for="lname" >Cantidad de Personas</label>
+        <input type="number" placeholder=1 id="cantidadPersonas" name="cantidadTotal" required pattern=/^[a-z]{1,2}$/ >
 
     <section id="opcionales">
         <h1>¿Requiere algún tipo de menú especial?</h1>
