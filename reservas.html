@@ -28,7 +28,7 @@
 
     <fieldset> 
         <legend>Formulario de Reserva:</legend>
-    <form id ="formReserva" class="centrarEnColumnas" action="" >
+    <form id ="formReserva" class="centrarEnColumnas" action="" onsubmit="verificarDatos()">
         <label for="nombreCompleto">Nombre Completo</label>
         <input type="text" id="nombreCompleto" name="nombreCompleto" placeholder="Pepe Argento" required >
         <label for="dni">DNI</label>
@@ -45,7 +45,7 @@
         <input type="checkbox" id="menuVegano" name="menuVegano" value="vegano">
         <label for="menuVegano"> Vegano </label>
     </section>
-        <input id="botonEnviar" onClick="verificarDatos()" type="submit" value="Realizar Reserva">
+        <input id="botonEnviar" type="submit" value="Realizar Reserva">
     </form>
 
 </fieldset>
