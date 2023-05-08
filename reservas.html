@@ -30,22 +30,22 @@
         <legend>Formulario de Reserva:</legend>
     <form id ="formReserva" class="centrarEnColumnas" action="" >
         <label for="nombreCompleto">Nombre Completo</label>
-        <input type="text" id="nombreCompleto" name="nombreCompleto" placeholder="Pepe Argento" required size="15">
+        <input type="text" id="nombreCompleto" name="nombreCompleto" placeholder="Pepe Argento" required >
         <label for="dni">DNI</label>
-        <input type="text" id="dni" name="dni" placeholder="Ingrese el DNI" required pattern = "[0-9]*" minlength="8" maxlength="8" size="10">
+        <input type="text" id="dni" name="dni" placeholder="Ingrese el DNI" required pattern = "[0-9]*" minlength="8" maxlength="8" >
         <label for="telefonoContacto">Teléfono de Contacto</label>
-        <input type="tel" id="telefonoContacto" name="telefonoContacto" placeholder="10 digitos" required pattern = "[0-9]*" minlength="10" maxlength="10" size="10">
+        <input type="tel" id="telefonoContacto" name="telefonoContacto" placeholder="10 digitos" required pattern = "[0-9]*" minlength="10" maxlength="10" >
         <label for="lname" >Cantidad de Personas</label>
         <input type="number" placeholder=1 id="cantidadPersonas" name="cantidadTotal" required min="1" max="10">
 
     <section id="opcionales">
         <h1>¿Requiere algún tipo de menú especial?</h1>
-        <input type="checkbox" id="celiaco" name="menuCeliaco" value="celiaco">
+        <input type="checkbox" id="menuCeliaco" name="menuCeliaco" value="celiaco">
         <label for="menuCeliaco"> Celíaco</label>
         <input type="checkbox" id="menuVegano" name="menuVegano" value="vegano">
         <label for="menuVegano"> Vegano </label>
     </section>
-        <input id="botonEnviar" type="submit" value="Realizar Reserva">
+        <input id="botonEnviar" onClick="verificarDatos()" type="submit" value="Realizar Reserva">
     </form>
 
 </fieldset>
@@ -67,3 +67,46 @@
 
 </body>
 </html>
+
+<script>
+
+function verificarDatos(){
+    const hayVacios = (currentValue) => currentValue == ""; 
+    const menuVegano = document.getElementById('menuVegano').checked
+    const menuCeliaco = document.getElementById('menuCeliaco').checked
+  
+
+    const datos = [document.getElementById('nombreCompleto').value,
+    document.getElementById('dni').value,
+    document.getElementById('telefonoContacto').value,
+    document.getElementById('cantidadPersonas').value,
+    document.getElementById('menuVegano').checked,
+    document.getElementById('menuCeliaco').checked
+    ]
+
+    if (!datos.every(hayVacios)){
+        const reserva = ["Nombre: " + datos[0],
+                          "DNI: " + datos[1],
+                          "Telefono: "+ datos[2],
+                          "Cantidad de Personas: "+ datos[3],
+                          "Menu Celiaco: "+ (datos[4] ? "SI": "NO")  ,
+                          "Menu Vegano: "+ (datos[5] ? "SI": "NO"),
+    ]
+        realizarReserva(reserva)
+    }else {
+        alert("¡Faltan completar datos!")
+    }
+}
+
+function realizarReserva(datosReserva){
+    alert("ATENCION: Lea atentamente y corrobore que los datos sean CORRECTOS.")
+    alert(`LOS DATOS INGRESADOS SON LOS SIGUIENTES: \n ${datosReserva.join("\n")}`)
+    var resultado = window.confirm("¿Estas seguro de realizar la reserva?")
+
+    if (resultado == true){
+        window.alert("Reserva realizada con éxito");
+    } else {
+        window.alert("Reserva Cancelada")
+    }
+}
+</script>
