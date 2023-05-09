@@ -84,10 +84,10 @@ function verificarDatos(){
     if (!datos.every(hayVacios)){
         const reserva = ["Nombre: " + datos[0],
                           "DNI: " + datos[1],
-                          "Telefono: "+ datos[2],
+                          "Teléfono: "+ datos[2],
                           "Cantidad de Personas: "+ datos[3],
-                          "Menu Celiaco: "+ (datos[4] ? "SI": "NO")  ,
-                          "Menu Vegano: "+ (datos[5] ? "SI": "NO"),
+                          "Menú Celíaco: "+ (datos[4] ? "SI": "NO")  ,
+                          "Menú Vegano: "+ (datos[5] ? "SI": "NO"),
     ]
         realizarReserva(reserva)
     }else {
@@ -96,9 +96,9 @@ function verificarDatos(){
 }
 
 function realizarReserva(datosReserva){
-    alert("ATENCION: Lea atentamente y corrobore que los datos sean CORRECTOS.")
+    alert("ATENCIÓN: Lea atentamente y corrobore que los datos sean CORRECTOS.")
     alert(`LOS DATOS INGRESADOS SON LOS SIGUIENTES: \n ${datosReserva.join("\n")}`)
-    var resultado = window.confirm("¿Estas seguro de realizar la reserva?")
+    var resultado = window.confirm("¿Estás seguro de realizar la reserva?")
 
     if (resultado == true){
         window.alert("Reserva realizada con éxito");
